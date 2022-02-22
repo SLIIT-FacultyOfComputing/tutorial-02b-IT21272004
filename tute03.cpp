@@ -1,23 +1,19 @@
-/*Exercise 3 - Repeatition
+#include <iostream>   //iostream headerfile
+using namespace std ;
 
-Convert the C program given below which calculates the Factorial of a number that you input from the keyboard to a C++ program.
+int main(){  //beginning of function main
+  int no ;   //declaring variables
+  long fac ;
 
-Please Note that the input command in C++ is std::cin. This is a representation of the Keyboard.*/
+  cout << "Enter a Number :" ;  //getting input
+  cin >> no ;
 
-#include <stdio.h>
-int main()
-{
-    int no;
-    long fac;
+  fac =1 ;
+  for (int r = no ; r>=1 ; r--){   //for loop
+    fac = fac * r ;
+  }
 
-    printf("Enter a Number : ");
-    scanf("%d", &no);
-
-    fac = 1;
-    for (int r=no; r >= 1; r--) {
-        fac = fac * r;
-    }
-
-    printf("Factorial of %d is %ld\n", no, fac);  
-    return 0;
-}
+  cout << "Factorial of " << no << " is " << fac << endl;  //printing output
+  
+  return 0;
+}  //end of function main
